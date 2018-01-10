@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Repositry ListVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RepositryListVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepositoryCell" rowHeight="117" id="0UG-Z2-MPL" customClass="RepositoryCell" customModule="RepoSearcher" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepositoryCell" rowHeight="117" id="0UG-Z2-MPL" customClass="RepositoryCell" customModule="RX" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="117"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0UG-Z2-MPL" id="B1g-zo-eQe">
@@ -82,6 +82,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="yi7-Vu-oHy"/>
                     <connections>
+                        <outlet property="tableView" destination="EHH-JH-2Jg" id="oe6-JV-gm1"/>
                         <segue destination="DcI-2D-L8j" kind="presentation" id="mRP-TG-CAk"/>
                     </connections>
                 </viewController>
@@ -89,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="189.59999999999999" y="135.38230884557723"/>
         </scene>
-        <!--View Controller-->
+        <!--LanguageVC-->
         <scene sceneID="bBD-Ud-Zy5">
             <objects>
-                <viewController id="wrG-xj-AXH" sceneMemberID="viewController">
+                <viewController id="wrG-xj-AXH" customClass="LanguageVC" customModule="RX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zg5-Sb-2xm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,6 +132,9 @@
                         <viewLayoutGuide key="safeArea" id="TX3-XL-m4c"/>
                     </view>
                     <navigationItem key="navigationItem" id="W0T-be-O4A"/>
+                    <connections>
+                        <outlet property="tableView" destination="JWj-GC-5r6" id="Pib-4I-IJw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dei-3A-UoX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,15 +12,16 @@ import RxSwift
 class LanguageViewModel{
     
     //MARK: - Inputs
-    var selectLanguage : AnyObserver<String>! = nil
+    var selectLanguage : AnyObserver<String>
     var cancel : AnyObserver<Void>! = nil
     
     //MARK: - Outputs
-    let languages : Observable<[String]>! = nil
-    var didSelectLanguage:Observable<String>! = nil
-    var didCancel: Observable<Void>! = nil
+    let languages : Observable<[String]>
+    var didSelectLanguage:Observable<String>
+    var didCancel: Observable<Void>
     
     init(githubService:GithubService = GithubService()) {
+        self.languages = githubService.getLanguageList()
         
         let _selectedLanguage = PublishSubject<String>()
         self.selectLanguage = _selectedLanguage.asObserver()
